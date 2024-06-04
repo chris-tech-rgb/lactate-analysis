@@ -74,7 +74,7 @@ def comparison(images, concentration_range):
   # Add legends
   plt.legend((p1[0], p2[0], p3[0]), ("R", "G", "B"), loc='upper right')
   # Axis range
-  plt.axis([-0.1, 2.1, 0, 100])
+  plt.axis([4, 54, 0, 100])
   # plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
   # plt.gca().xaxis.set_minor_locator(MultipleLocator(0.5))
   # plt.gca().yaxis.set_minor_locator(MultipleLocator(10))
