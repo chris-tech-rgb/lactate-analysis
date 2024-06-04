@@ -78,13 +78,13 @@ def comparison(images, concentration_range):
   # plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
   # plt.gca().xaxis.set_minor_locator(MultipleLocator(0.5))
   # plt.gca().yaxis.set_minor_locator(MultipleLocator(10))
-  plt.xlabel("Glucose concentration (mM)")
+  plt.xlabel("Lactate concentration (mM)")
   plt.ylabel("Percentage of RGB color (%)")
   plt.show()
 
 def main():
   images = []
-  concentration_range = [0, 0.05, 0.25, 0.5, 1, 1.25, 1.5, 2]
+  concentration_range = [8, 16, 25, 50]
   for i in concentration_range:
     name = str(i)
     if len(str(i)) == 3:
