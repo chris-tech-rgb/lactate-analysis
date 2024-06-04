@@ -73,14 +73,14 @@ def comparison(images, concentration_range):
   # Add legends
   plt.legend((p1[0], p2[0], p3[0]), ("R", "G", "B"), loc='upper right')
   # Axis range
-  plt.axis([4, 54, 0, 100])
+  plt.axis([-4, 54, 0, 100])
   plt.xlabel("Lactate concentration (mM)")
   plt.ylabel("Percentage of RGB color (%)")
   plt.show()
 
 def main():
   images = []
-  concentration_range = [8, 16, 25, 50]
+  concentration_range = [0, 2, 4, 8, 16, 25, 50]
   for i in concentration_range:
     name = str(i)
     if len(str(i)) == 3:
