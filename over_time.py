@@ -71,7 +71,7 @@ def comparison(imgs):
   plt.show()
 
 def main():
-  image_dict = load_images('0.1mM 6h')
+  image_dict = load_images('50mM 6h')
   comparison(image_dict)
 
 
