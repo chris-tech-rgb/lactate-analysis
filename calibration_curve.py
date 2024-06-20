@@ -4,6 +4,7 @@ Draw a calibration curve.
 """
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import os
 import skimage as ski
 import statistics
@@ -55,6 +56,10 @@ def comparison(images, concentration_range):
     color, st_dev = rgb_stdev(i)
     rgb.append(color)
     sd.append(st_dev)
+  # Export as excel
+  df = pd.DataFrame([[a] + b + c for a, b, c in zip(concentrations, rgb, sd)],
+  columns=['Lactate concentration', 'R', 'G', 'B', 'SD of R', 'SD of G', 'SD of B'])
+  df.to_excel("lactate concentration calibration curve.xlsx", index=False)
   # Plots and errorbars of R
   red = np.array([i[0] for i in rgb])
   red_sd = [i[0] for i in sd]
