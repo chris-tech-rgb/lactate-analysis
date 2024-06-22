@@ -1,6 +1,6 @@
 """
 This script get RGB values from images in a specific folder.
-And then, calculate the glucose concentrations according to the fitting function and RGB values of images.
+And then, calculate the lactate concentrations according to the fitting function and RGB values of images.
 """
 import csv
 import matplotlib.pyplot as plt
