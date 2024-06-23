@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import pandas as pd
 import re
 import skimage as ski
 from natsort import natsorted
@@ -69,6 +70,10 @@ def comparison(imgs):
   axes[1, 0].set_xlabel('Time (h)')
   plt.ylim(0, 100)
   plt.show()
+  # Export as excel
+  df = pd.DataFrame([[50] + [a] + b for a, b in zip(time, rgb)],
+  columns=['Lactate concentration (mM)', 'Time (h)', 'R (%)', 'G (%)', 'B (%)'])
+  df.to_excel("excel/50 mM over time.xlsx", index=False)
 
 def main():
   image_dict = load_images('50mM 6h')
